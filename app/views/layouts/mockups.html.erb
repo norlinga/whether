@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Whether App</title>
+  <%= stylesheet_link_tag "main", media: "all" %>
+</head>
+<body>
+  <div id="content">
+    <h1>Whether</h1>
+
+    <div id="address-box">
+      <form action="/choose">
+        <input type="text" name="Search" id="Search" placeholder="enter an address, zip code, or city and state">
+        <input type="button" value="Search">
+      </form>
+    </div>
+
+    <%= yield %>
+  </div>
+</body>
+</html>

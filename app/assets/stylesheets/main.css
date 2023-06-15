@@ -1,0 +1,107 @@
+html, body {
+  padding: 0;
+  margin: 0;
+  font-family:Arial, Helvetica, sans-serif;
+  color:#555;
+}
+
+div#content {
+  margin:0 auto;
+  width:60%;
+}
+
+h1 {
+  font-weight: 200;
+  color:#555;
+  text-align:center;
+}
+
+h2#weather-for {
+  font-weight: 200;
+}
+
+h3 {
+  font-size: 90%;
+}
+
+div#weather-report div#today div#current-temp {
+  color: black;
+  font-size: 3em;
+}
+
+div#weather-report div#today div#today-high {
+  float: right;
+  font-size: 1.5em;
+  padding-right: 2.5em;
+  padding-top: .5em;
+}
+
+div#weather-report div#today div#today-low {
+  float: right;
+  font-size: 1.5em;
+  padding-top: .5em;
+}
+
+div#weather-report div#today div#today-synopsis {
+  color: #555;
+}
+
+div#weather-report div#today div#cache-notice {
+  color: #999;
+  font-size: 80%;
+  padding:.5em 0;
+}
+
+div#weather-report div#forecast div.forecast-day div.forecast-day-name {
+  font-size: 80%;
+  padding:.25em 0;
+}
+
+div#weather-report div#forecast div.forecast-day {
+  padding-bottom:1.5em;
+}
+
+div#weather-report div#forecast div.forecast-day div.forecast-high {
+  padding:.5em 0;
+}
+
+div#weather-report div#forecast div.forecast-day div.forecast-low {
+  float: right;
+  padding:.5em 0;
+}
+
+div#weather-report div#forecast div.forecast-day div.forecast-synopsis {
+  color: #555;
+  font-size: 90%;
+  padding-top:.25em;
+}
+
+div#address-box {
+  text-align:center;
+}
+
+div#address-box form {
+  width:80%;
+  padding:.75em .25em;
+  margin:0 auto;
+  border:1px solid #999;
+}
+
+div#address-box form input[type=text] {
+  width:80%;
+  color:#888;
+  border:0;
+  outline:none;
+}
+
+div#choose {
+  padding-top: 2em;
+}
+
+div#choose ul li {
+  padding:.25em 0;
+  list-style: none;
+  color:#79b;
+  text-decoration: underline;
+}
+
