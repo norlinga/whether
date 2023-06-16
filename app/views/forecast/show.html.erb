@@ -1,0 +1,39 @@
+<h2 id="weather-for">Weather for <%= @address[:name] %></h2>
+
+<div id="weather-report">
+  <h3 id="current-weather">Currently</h3>
+  <div id="today">
+    <div id="today-low">
+      Low <%= @weather_report['current']['low'] %>&deg; F
+    </div>
+    <div id="today-high">
+      High <%= @weather_report['current']['high'] %>&deg; F
+    </div>
+    <div id="current-temp">
+      <%= @weather_report['current']['current_temp'] %>&deg; F
+    </div>
+    <div id="today-synopsis">
+      <%= @weather_report['current']['summary'] %>
+    </div>
+    <div id="cache-notice">
+      weather data current as of <%= distance_of_time_in_words(Time.at(@weather_report['current']['reported_at']), Time.now) %> ago
+    </div>
+  </div>
+  <div id="forecast">
+    <h3 id="weather-forecast">Forecast</h3>
+    <% @weather_report['daily'].each do |day| %>
+    <div class="forecast-day">
+      <div class="forecast-day-name"><%= day['formatted_date_string'] %></div>
+      <div class="forecast-low">
+        Low <%= day['low'] %>&deg; F
+      </div>
+      <div class="forecast-high">
+        High <%= day['high'] %>&deg; F
+      </div>
+      <div class="forecast-synopsis">
+        <%= day['summary'] %>
+      </div>
+    </div>
+    <% end %>
+  </div>
+</div>

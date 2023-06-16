@@ -1,0 +1,7 @@
+<div id="choose">
+  <ul id="choices">
+    <% @address_search_result.each do |addr| %>
+      <li class="choice"><%= link_to addr[:name], forecast_path(addr[:zip]) %></li>
+    <% end %>
+  </ul>
+</div>

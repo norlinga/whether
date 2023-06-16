@@ -24,6 +24,24 @@ h3 {
   font-size: 90%;
 }
 
+div.flash-message.alert {
+  color: #733;
+  border: 1px solid #733;
+  background-color: #fbb;
+  text-align: center;
+  padding:1em .5em;
+  margin:2em 0;
+}
+
+div.flash-message.notice {
+  color: #373;
+  border: 1px solid #373;
+  background-color: #bfb;
+  text-align: center;
+  padding:1em .5em;
+  margin:2em 0;
+}
+
 div#weather-report div#today div#current-temp {
   color: black;
   font-size: 3em;

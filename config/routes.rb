@@ -1,14 +1,16 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
+  # resources :mockups, only: %i[index show] do
+  #   collection do
+  #     get 'choose'
+  #   end
+  # end
 
-  # Defines the root path route ("/")
-  # root "articles#index"
+  root 'forecast#index'
 
-  resources :mockups, only: %i[index show] do
-    collection do
-      get 'choose'
-    end
-  end
+  resources :forecast, only: %i[index show]
+
+  get '/address/choose', to: 'address#choose', as: :choose_address
+  post '/address/search', to: 'address#search', as: :search_address
 end

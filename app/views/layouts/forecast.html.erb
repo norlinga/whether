@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Whether App</title>
+  <%= stylesheet_link_tag "main", media: "all" %>
+</head>
+<body>
+  <div id="content">
+    <h1>Whether</h1>
+
+    <div id="address-box">
+      <%= form_with url: search_address_path, method: :post do |form| %>
+        <%= form.text_field :search_text, placeholder: "enter an address, zip code, or city and state" %>
+        <%= form.submit 'Search' %>
+      <% end %>
+    </div>
+
+    <% flash.each do |key, value| %>
+      <div class="flash-message <%= key %>">
+        <%= value %>
+      </div>
+    <% end %>
+
+    <%= yield %>
+  </div>
+</body>
+</html>

@@ -30,4 +30,6 @@
 # available at https://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  address:
+    notfound: "The address you entered couldn't be found.  Try entering a city and state, a zipcode, or a home address."
+    ambiguous: "Your search returned multiple possible matches.  Select the best match below or try another search."
